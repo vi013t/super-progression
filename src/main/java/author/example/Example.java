@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 public class Example {
 
     /** The unique ID for this mod, which must be different from all other mods in a pack, and must match src/resources/META_INF/mods.toml */
-    public static final String MODID = "spacial_temporal_rending";
+    public static final String MODID = "examplemod";
     /** A direct reference to a logger */
     public static final Logger LOGGER = LogUtils.getLogger();
 
