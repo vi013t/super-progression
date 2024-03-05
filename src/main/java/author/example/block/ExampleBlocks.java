@@ -24,6 +24,8 @@ public class ExampleBlocks {
 
     /** The register for all blocks in the mod. */
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Example.MODID);
+
+    /** The register for all block entities in the mod */
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, Example.MODID);
 
     /**
@@ -41,6 +43,7 @@ public class ExampleBlocks {
      *
      * @param name The name of the block and item in the registries
      * @param supplier A supplier that returns a new instance of the block each time it is called.
+     *
      * @return The created block
      */
     private static <T extends Block> DeferredBlock<T> blockWithItem(String name, Supplier<T> supplier) {
