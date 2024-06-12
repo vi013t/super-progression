@@ -1,0 +1,85 @@
+{
+	// General
+	"item.apeiron.armor_plate": "Armor Plate",
+	"block.apeiron.tinker_table": "Tinkerer's Workbench",
+
+	// Tier 1
+	"item.apeiron.terrio": "Terrio",
+	"item.apeiron.jackalope_antler": "Jackalope Antler",
+	"item.apeiron.rhenium_plate": "Rhenium Plate",
+	"item.apeiron.andalusite_ingot": "Andalusite Ingot",
+	"item.apeiron.armor_plate_tier_1": "Armor Plate",
+
+	// Tier 2
+	"item.apeiron.electrio": "Electrio",
+	"item.apeiron.danburite_dust": "Danburite Dust",
+	"item.apeiron.danburite_ingot": "Danburite Ingot",
+	"item.apeiron.yttrium_plate": "Yttrium Plate",
+	"item.apeiron.armor_plate_tier_2": "Armor Plate",
+
+	// Tier 3
+	"item.apeiron.vitalio": "Vitalio",
+	"item.apeiron.basilisk_scale": "Basilisk Scale",
+	"item.apeiron.chromite_ingot": "Chromite Ingot",
+	"item.apeiron.uranium_plate": "Uranium Plate",
+	"item.apeiron.armor_plate_tier_3": "Armor Plate",
+
+	// Tier 4
+	"item.apeiron.magnio": "Magnio",
+	"item.apeiron.cuprite_ingot": "Cuprite Ingot",
+	"item.apeiron.karkinos_claw": "Karkinos Claw",
+	"item.apeiron.osmium_plate": "Osmium Plate",
+	"item.apeiron.armor_plate_tier_4": "Armor Plate",
+
+	// Tier 5
+	"item.apeiron.lushio": "Lushio",
+	"item.apeiron.tugtupite_ingot": "Tugtupite Ingot",
+	"item.apeiron.unicorn_horn": "Unicorn Horn",
+	"item.apeiron.germanium_plate": "Germanium Plate",
+	"item.apeiron.armor_plate_tier_5": "Armor Plate",
+
+	// Tier 6
+	"item.apeiron.aquio": "Aquio",
+	"item.apeiron.kraken_tentacle": "Kraken Tentacle",
+	"item.apeiron.kyanite_ingot": "Kyanite Ingot",
+	"item.apeiron.lutetium_plate": "Lutetium Plate",
+	"item.apeiron.armor_plate_tier_6": "Armor Plate",
+
+	// Tier 7
+	"item.apeiron.tenebrio": "Tenebrio",
+	"item.apeiron.kunzite_ingot": "Kunzite Ingot",
+	"item.apeiron.titanium_plate": "Titanium Plate",
+	"item.apeiron.griffin_talon": "Griffin Talon",
+	"item.apeiron.armor_plate_tier_7": "Armor Plate",
+
+	// Tier 8
+	"item.apeiron.flario": "Flario",
+	"item.apeiron.sphalerite_ingot": "Sphalerite Ingot",
+	"item.apeiron.niobium_plate": "Niobium Plate",
+	"item.apeiron.phoenix_feather": "Phoenix Feather",
+	"item.apeiron.armor_plate_tier_8": "Armor Plate",
+
+	// Tier 9
+	"item.apeiron.tranquio": "Tranquio",
+	"item.apeiron.cyclops_eye": "Cyclops Eye",
+	"item.apeiron.armor_plate_tier_9": "Armor Plate",
+	"item.apeiron.adamite_ingot": "Adamite Ingot",
+	"item.apeiron.chromium_plate": "Chromium Plate",
+
+	// Tier 10
+	"item.apeiron.infinio": "Infinio",
+	"item.apeiron.dragon_scale": "Dragon Scale",
+	"item.apeiron.iridium_plate": "Iridium Plate",
+	"item.apeiron.opal_dust": "Opal Dust",
+	"item.apeiron.opal_dust_clump": "Opal Dust Clump",
+	"item.apeiron.opal_ingot": "Opal Ingot",
+	"item.apeiron.opal_ore": "Opal Ore",
+	"item.apeiron.armor_plate_tier_10": "Armor Plate",
+
+	// General
+	"item.apeiron.continuum_portal": "Continuum Portal",
+	"item.apeiron.limitless": "Limitless",
+	"item.apeiron.kraken_tentacles": "Kraken Tentacles",
+
+	"itemGroup.apeiron": "Progression"
+}
