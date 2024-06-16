@@ -8,11 +8,11 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 
 public class OpalUtils {
-	public static Component colorize(String name) {
+	public static MutableComponent colorize(String name) {
 		return colorize(name, Style.EMPTY);
     }
 
-	public static Component colorize(String name, Style style) {
+	public static MutableComponent colorize(String name, Style style) {
 		Optional<MutableComponent> characterComponent = Optional.empty();
 		for (int index = 0; index < name.length(); index++) {
 			Color color = Color.getHSBColor(((float) index) / ((float) name.length()), 0.15f, 1);

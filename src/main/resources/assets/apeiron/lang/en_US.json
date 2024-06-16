@@ -1,4 +1,22 @@
 {
+	// Exploration
+
+	"item.apeiron.blender": "Blender",
+	"item.apeiron.chew_toy": "Chew Toy",
+	"item.apeiron.cobblestone_generator": "Cobblestone Generator",
+	"item.apeiron.college_textbook": "College Textbook",
+	"item.apeiron.emerald_award": "Emerald Award",
+	"item.apeiron.frying_pan": "Frying Pan",
+	"item.apeiron.green_thumb": "Green Thumb",
+	"item.apeiron.love_potion": "Love Potion",
+	"item.apeiron.miners_helmet": "Miner's Helmet",
+	"item.apeiron.oxygen_tank": "Oxygen Tank",
+	"item.apeiron.panic_button": "Panic Button",
+	"item.apeiron.pocket_crafting_table": "Pocket Crafting Table",
+	"item.apeiron.pocket_nether_portal": "Pocket Nether Portal",
+	"item.apeiron.sleeping_bag": "Sleeping Bag",
+	"item.apeiron.worm_on_a_hook": "Worm on a Hook",
+
 	// General
 	"item.apeiron.armor_plate": "Armor Plate",
 	"block.apeiron.tinker_table": "Tinkerer's Workbench",
@@ -81,5 +99,11 @@
 	"item.apeiron.limitless": "Limitless",
 	"item.apeiron.kraken_tentacles": "Kraken Tentacles",
 
-	"itemGroup.apeiron": "Progression"
+	// Creative Tabs
+	"itemGroup.apeiron.tech": "Apeiron Technology",
+	"itemGroup.apeiron.mining": "Apeiron Mining",
+	"itemGroup.apeiron.magic": "Apeiron Magic",
+	"itemGroup.apeiron.boss": "Apeiron Creatures",
+	"itemGroup.apeiron.gear": "Apeiron Gear",
+	"itemGroup.apeiron.exploration": "Apeiron Exploration"
 }

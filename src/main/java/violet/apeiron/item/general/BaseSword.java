@@ -20,7 +20,7 @@ public class BaseSword extends Item {
 	@Override
 	public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> components, TooltipFlag isAdvanced) {
 		for (var modifierEntry : stack.getData(ApeironAttachments.MODIFIER).modifierEntries()) {
-			components.add(Component.literal(modifierEntry.getKey().getName() + " " + modifierEntry.getValue()).withColor(modifierEntry.getKey().getColor()));
+			components.add(Component.literal(modifierEntry.getKey().name + " " + modifierEntry.getValue()).withColor(modifierEntry.getKey().color));
 		}
 	}
 }

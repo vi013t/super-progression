@@ -23,12 +23,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import violet.apeiron.item.general.TieredItem;
+import violet.apeiron.data.Modifier;
+import violet.apeiron.item.general.ArmorPlate;
 
-public class Electrio extends TieredItem {
+public class Electrio extends ArmorPlate {
 
 	public Electrio() {
-		super(2);
+		super(Modifier.CHARGED);
 	}
 
 	@Override
@@ -60,7 +61,6 @@ public class Electrio extends TieredItem {
 	@Override
 	public void appendHoverText(ItemStack stack, @Nullable Level world, List<Component> components, TooltipFlag isAdvanced) {
 		super.appendHoverText(stack, world, components, isAdvanced);
-			components.add(Component.literal("Modifier: ").append(Component.literal("Haste").withColor(0xFFFF99)));
 		if (Screen.hasShiftDown()) {
 			components.add(Component.literal("").withStyle(Style.EMPTY.withColor(0xFFFF00)));
 			components.add(Component.literal("Pure concentrated electricity essence.").withStyle(Style.EMPTY.withColor(0xFFFF00)));
