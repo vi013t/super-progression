@@ -3,22 +3,22 @@
 	"pattern": ["ATA", "DCD", "RTR"],
 	"key": {
 		"A": {
-			"item": "example:jackalope_antler"
+			"item": "apeiron:jackalope_antler"
 		},
 		"T": {
-			"item": "example:terrio"
+			"item": "apeiron:terrio"
 		},
 		"R": {
-			"item": "example:rhenium_plate"
+			"item": "apeiron:rhenium_plate"
 		},
 		"D": {
-			"item": "example:andalusite_ingot"
+			"item": "apeiron:andalusite_ingot"
 		},
 		"C": {
-			"item": "example:armor_plate"
+			"item": "apeiron:armor_plate"
 		}
 	},
 	"result": {
-		"item": "example:armor_plate_tier_1"
+		"item": "apeiron:armor_plate_tier_1"
 	}
 }

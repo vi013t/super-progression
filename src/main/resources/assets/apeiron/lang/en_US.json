@@ -105,5 +105,8 @@
 	"itemGroup.apeiron.magic": "Apeiron Magic",
 	"itemGroup.apeiron.boss": "Apeiron Creatures",
 	"itemGroup.apeiron.gear": "Apeiron Gear",
-	"itemGroup.apeiron.exploration": "Apeiron Exploration"
+	"itemGroup.apeiron.exploration": "Apeiron Exploration",
+
+	// Guis
+	"container.tinker_table": "Tinker Table"
 }

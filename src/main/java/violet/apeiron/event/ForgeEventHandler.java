@@ -1,9 +1,16 @@
 package violet.apeiron.event;
 
+import com.mojang.datafixers.util.Either;
+
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.FormattedText;
+import net.minecraft.network.chat.Style;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.RenderTooltipEvent;
 import net.neoforged.neoforge.event.TickEvent;
 import net.neoforged.neoforge.event.entity.living.LivingHurtEvent;
 import violet.apeiron.Apeiron;
@@ -57,5 +64,25 @@ public class ForgeEventHandler {
 			}
 
 		}
+	}
+
+	@SubscribeEvent
+	public static void renderTooltip(RenderTooltipEvent.GatherComponents event) {
+
+		// Display the modifiers
+		event.getTooltipElements().add(Either.left(FormattedText.of("Modifiers:")));
+		for (var modifierEntry : event.getItemStack().getData(ApeironAttachments.MODIFIER).modifierEntries()) {
+			event.getTooltipElements().add(Either.left(FormattedText.of("    " + modifierEntry.getKey().name, Style.EMPTY.withColor(modifierEntry.getKey().color))));
+		}
+
+		// Add the "Hold shift for more information" message
+		if (!Screen.hasShiftDown()) {
+			event.getTooltipElements().add(Either.left(FormattedText.of("    ")));
+			event.getTooltipElements().add(Either.left(FormattedText.of("Hold SHIFT for more information...", Style.EMPTY.withColor(ChatFormatting.DARK_GRAY).withItalic(true))));
+		}
+	}
+
+	@SubscribeEvent
+	public static void renderTooltipColor(RenderTooltipEvent.Color event) {
 	}
 }

@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.Set;
 
 public class ModifierAttachment {
+
 	private final Map<Modifier, Integer> modifiers = new LinkedHashMap<>();
 
 	public void addModifier(Modifier modifier, int level) {
@@ -34,5 +35,19 @@ public class ModifierAttachment {
 
 	public boolean hasModifier(Modifier modifier) {
 		return this.modifiers.containsKey(modifier);
+	}
+
+	public Optional<Modifier> firstModifier() {
+		return Optional.ofNullable(this.modifiers.entrySet().toArray(Modifier[]::new)[0]);
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder("[");
+		for (var modifier : this.modifiers.entrySet()) {
+			builder.append(modifier.getKey().name + ", ");
+		}
+		builder.append("]");
+		return builder.toString();
 	}
 }

@@ -16,6 +16,11 @@ public class ApeironAttachments {
 
 	public static final Supplier<AttachmentType<ModifierAttachment>> MODIFIER = ATTACHMENT_TYPES.register("modifier", () -> AttachmentType.builder(ModifierAttachment::new).build());
 
+	/**
+	 * Registers the data attachments in the Apeiron mod with the given event bus. This should be called once during mod initialization.
+	 * 
+	 * @param eventBus The event bus, provided by NeoForge, to register the Apeiron attachments in.
+	 */
 	public static void register(@Nonnull IEventBus eventBus) {
 		ApeironAttachments.ATTACHMENT_TYPES.register(eventBus);
 	}

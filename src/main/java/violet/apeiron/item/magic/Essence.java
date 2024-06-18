@@ -16,9 +16,9 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import violet.apeiron.item.general.TieredItem;
+import violet.apeiron.item.general.TieredItemOld;
 
-public class Essence extends TieredItem {
+public class Essence extends TieredItemOld {
 
 	private final String name;
 	private final Block placeableBlock;

@@ -14,18 +14,18 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import violet.apeiron.item.mining.opal.OpalUtils;
 
-public class TieredItem extends Item {
+public class TieredItemOld extends Item {
 
 	protected final int tier;
 	private final Optional<String> name;
 
-	public TieredItem(int tier, String name) {
+	public TieredItemOld(int tier, String name) {
 		super(new Item.Properties());
 		this.tier = tier;
 		this.name = Optional.of(name);
 	}
 
-	public TieredItem(int tier) throws IllegalArgumentException {
+	public TieredItemOld(int tier) throws IllegalArgumentException {
 		super(new Item.Properties());
 		this.tier = tier;
 		this.name = Optional.empty();

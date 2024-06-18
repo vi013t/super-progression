@@ -24,9 +24,9 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import violet.apeiron.data.Modifier;
-import violet.apeiron.item.general.ArmorPlate;
+import violet.apeiron.item.general.ModifierItem;
 
-public class Electrio extends ArmorPlate {
+public class Electrio extends ModifierItem {
 
 	public Electrio() {
 		super(Modifier.CHARGED);

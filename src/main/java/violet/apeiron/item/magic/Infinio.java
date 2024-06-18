@@ -16,10 +16,10 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import violet.apeiron.data.Modifier;
-import violet.apeiron.item.general.ArmorPlate;
+import violet.apeiron.item.general.ModifierItem;
 import violet.apeiron.item.mining.opal.OpalUtils;
 
-public class Infinio extends ArmorPlate {
+public class Infinio extends ModifierItem {
 
 	public Infinio() {
 		super(Modifier.LIMITLESS, "Infinio");

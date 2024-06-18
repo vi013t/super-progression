@@ -21,12 +21,12 @@ import violet.apeiron.Apeiron;
 import violet.apeiron.data.Modifier;
 import violet.apeiron.item.boss.UnicornHorn;
 import violet.apeiron.item.exploration.LootItem;
-import violet.apeiron.item.general.ArmorPlate;
 import violet.apeiron.item.general.BaseSword;
 import violet.apeiron.item.general.ContinuumPortal;
 import violet.apeiron.item.general.InfiniteVoid;
+import violet.apeiron.item.general.ModifierItem;
 import violet.apeiron.item.general.TieredArmorItem;
-import violet.apeiron.item.general.TieredItem;
+import violet.apeiron.item.general.TieredItemOld;
 import violet.apeiron.item.magic.Electrio;
 import violet.apeiron.item.magic.Infinio;
 import violet.apeiron.item.magic.InfinioBackpack;
@@ -87,16 +87,16 @@ public class ApeironItems {
 	public static final DeferredItem<InfiniteVoid> LIMITLESS = ITEMS.register("limitless", InfiniteVoid::new);
 
 	// Tier 0
-	public static final DeferredItem<TieredItem> ARMOR_PLATE = item("armor_plate", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> AXE_HEAD = item("base_axe_head", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> HOE_HEAD = item("hoe_head", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> PICKAXE_HEAD = item("pickaxe_head", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> SHOVEL_HEAD = item("shovel_head", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> BLADE = item("blade", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> BASE_HELMET = item("base_helmet", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> BASE_CHESTPLATE = item("base_chestplate", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> BASE_LEGGINGS = item("base_leggings", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> BASE_BOOTS = item("base_boots", () -> new TieredItem(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> ARMOR_PLATE = item("armor_plate", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> AXE_HEAD = item("base_axe_head", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> HOE_HEAD = item("hoe_head", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> PICKAXE_HEAD = item("pickaxe_head", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> SHOVEL_HEAD = item("shovel_head", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> BLADE = item("blade", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> BASE_HELMET = item("base_helmet", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> BASE_CHESTPLATE = item("base_chestplate", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> BASE_LEGGINGS = item("base_leggings", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> BASE_BOOTS = item("base_boots", () -> new TieredItemOld(0), ApeironCreativeTab.GEAR);
 	public static final DeferredItem<BaseSword> BASE_SWORD = item("base_sword", BaseSword::new, ApeironCreativeTab.GEAR);
 
 	// Tier 1
@@ -106,32 +106,32 @@ public class ApeironItems {
 	 * as bonemeal. Terrio has the {@link violet.apeiron.data.Modifier#TILLING Tilling} modifier, which can be used on tools to till dirt into farmland. This
 	 * can be applied to tools, meaning any tool modified with Terrio can be used as a hoe (in terms of tilling, not breaking).
 	 */
-	public static final DeferredItem<ArmorPlate> TERRIO = item("terrio", () -> new ArmorPlate(Modifier.TILLING), ApeironCreativeTab.MAGIC);
+	public static final DeferredItem<ModifierItem> TERRIO = item("terrio", () -> new ModifierItem(Modifier.TILLING), ApeironCreativeTab.MAGIC);
 
-	public static final DeferredItem<TieredItem> RHENIUM_PLATE = item("rhenium_plate", () -> new TieredItem(1), ApeironCreativeTab.TECH);
+	public static final DeferredItem<TieredItemOld> RHENIUM_PLATE = item("rhenium_plate", () -> new TieredItemOld(1), ApeironCreativeTab.TECH);
 
 	/**
 	 * The "Jackalope Antler" item. This is the Tier 1 item in the Boss path. It's an antler obtained by killing a Jackalope, the lowest tier boss. The modifier
 	 * of this item is {@link violet.apeiron.data.Modifier#STEP_ASSIST Step Assist}, which allows the player to walk up blocks without jumping. This modifier
 	 * can only be applied to boots.
 	 */
-	public static final DeferredItem<ArmorPlate> JACKALOPE_ANTLER = item("jackalope_antler", () -> new ArmorPlate(Modifier.STEP_ASSIST), ApeironCreativeTab.BOSS);
+	public static final DeferredItem<ModifierItem> JACKALOPE_ANTLER = item("jackalope_antler", () -> new ModifierItem(Modifier.STEP_ASSIST), ApeironCreativeTab.BOSS);
 
-	public static final DeferredItem<TieredItem> ANDALUSITE_INGOT = item("andalusite_ingot", () -> new TieredItem(1), ApeironCreativeTab.MINING);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_1 = item("armor_plate_tier_1", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> BLADE_TIER_1 = item("blade_tier_1", () -> new TieredItem(1), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> PICKAXE_HEAD_TIER_1 = item("pickaxe_head_tier_1", () -> new TieredItem(1), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> SHOVEL_HEAD_TIER_1 = item("shovel_head_tier_1", () -> new TieredItem(1), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<TieredItem> AXE_HEAD_TIER_1 = item("axe_head_tier_1", () -> new TieredItem(1), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> ANDALUSITE_INGOT = item("andalusite_ingot", () -> new TieredItemOld(1), ApeironCreativeTab.MINING);
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_1 = item("armor_plate_tier_1", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> BLADE_TIER_1 = item("blade_tier_1", () -> new TieredItemOld(1), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> PICKAXE_HEAD_TIER_1 = item("pickaxe_head_tier_1", () -> new TieredItemOld(1), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> SHOVEL_HEAD_TIER_1 = item("shovel_head_tier_1", () -> new TieredItemOld(1), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> AXE_HEAD_TIER_1 = item("axe_head_tier_1", () -> new TieredItemOld(1), ApeironCreativeTab.GEAR);
 
 	// Tier 2
 	public static final DeferredItem<Electrio> ELECTRIO = item("electrio", Electrio::new, ApeironCreativeTab.MAGIC);
-	public static final DeferredItem<TieredItem> DANBURITE_DUST = item("danburite_dust", () -> new TieredItem(2), ApeironCreativeTab.MINING);
-	public static final DeferredItem<TieredItem> DANBURITE_INGOT = item("danburite_ingot", () -> new TieredItem(2), ApeironCreativeTab.MINING);
-	public static final DeferredItem<TieredItem> YTTRIUM_PLATE = item("yttrium_plate", () -> new TieredItem(2), ApeironCreativeTab.TECH);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_2 = item("armor_plate_tier_2", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> DANBURITE_DUST = item("danburite_dust", () -> new TieredItemOld(2), ApeironCreativeTab.MINING);
+	public static final DeferredItem<TieredItemOld> DANBURITE_INGOT = item("danburite_ingot", () -> new TieredItemOld(2), ApeironCreativeTab.MINING);
+	public static final DeferredItem<TieredItemOld> YTTRIUM_PLATE = item("yttrium_plate", () -> new TieredItemOld(2), ApeironCreativeTab.TECH);
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_2 = item("armor_plate_tier_2", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
 	// public static final DeferredItem<ArmorPlate> REINFORCED_PLATE_TIER_2 = item("reinforced_plate_tier_2", () -> new ArmorPlate(Modifier.DURABILITY), ApeironCreativeTab.GEAR);
-	public static final DeferredItem<ArmorPlate> RAZOR_TIER_2 = item("razor_tier_2", () -> new ArmorPlate(Modifier.SHARPNESS), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<ModifierItem> RAZOR_TIER_2 = item("razor_tier_2", () -> new ModifierItem(Modifier.SHARPNESS), ApeironCreativeTab.GEAR);
 
 	// Tier 3
 
@@ -141,52 +141,59 @@ public class ApeironItems {
 	 * damaging them. When used on an entity, it will heal the entity, and when used on a block, it will place grass.
 	 */
 	public static final DeferredItem<Vitalio> VITALIO = item("vitalio", Vitalio::new, ApeironCreativeTab.MAGIC);
-	public static final DeferredItem<TieredItem> CHROMITE_INGOT = item("chromite_ingot", () -> new TieredItem(3), ApeironCreativeTab.MINING);
-	public static final DeferredItem<TieredItem> BASILISK_SCALE = item("basilisk_scale", () -> new TieredItem(3), ApeironCreativeTab.BOSS);
-	public static final DeferredItem<ArmorPlate> URANIUM_PLATE = item("uranium_plate", () -> new ArmorPlate(Modifier.RADIOACTIVE), ApeironCreativeTab.TECH);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_3 = item("armor_plate_tier_3", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> CHROMITE_INGOT = item("chromite_ingot", () -> new TieredItemOld(3), ApeironCreativeTab.MINING);
+	public static final DeferredItem<TieredItemOld> BASILISK_SCALE = item("basilisk_scale", () -> new TieredItemOld(3), ApeironCreativeTab.BOSS);
+
+	/**
+	 * The Uranium essence item from the tech path. This is the third tier tech item in the green path, and it's modifier is
+	 * {@link violet.apeiron.data.Modifier#RADIOACTIVE Radioactive}, which can be applied to armor, causing nearby hostile entities
+	 * will passively take damage.
+	 */
+	public static final DeferredItem<ModifierItem> URANIUM_PLATE = item("uranium_plate", () -> new ModifierItem(Modifier.RADIOACTIVE), ApeironCreativeTab.TECH);
+
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_3 = item("armor_plate_tier_3", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
 
 	// Tier 4
-	public static final DeferredItem<ArmorPlate> MAGNIO = item("magnio", () -> new ArmorPlate(Modifier.MAGNETIC), ApeironCreativeTab.MAGIC);
-	public static final DeferredItem<TieredItem> CUPRITE_INGOT = item("cuprite_ingot", () -> new TieredItem(4), ApeironCreativeTab.MINING);
-	// public static final DeferredItem<ArmorPlate> KARKINOS_CLAW = item("karkinos_claw", () -> new ArmorPlate(Modifier.SHEARING), ApeironCreativeTab.BOSS);
-	public static final DeferredItem<TieredItem> OSMIUM_PLATE = item("osmium_plate", () -> new TieredItem(4), ApeironCreativeTab.TECH);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_4 = item("armor_plate_tier_4", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<ModifierItem> MAGNIO = item("magnio", () -> new ModifierItem(Modifier.MAGNETIC), ApeironCreativeTab.MAGIC);
+	public static final DeferredItem<TieredItemOld> CUPRITE_INGOT = item("cuprite_ingot", () -> new TieredItemOld(4), ApeironCreativeTab.MINING);
+	public static final DeferredItem<ModifierItem> KARKINOS_CLAW = item("karkinos_claw", () -> new ModifierItem(Modifier.SHEARING), ApeironCreativeTab.BOSS);
+	public static final DeferredItem<TieredItemOld> OSMIUM_PLATE = item("osmium_plate", () -> new TieredItemOld(4), ApeironCreativeTab.TECH);
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_4 = item("armor_plate_tier_4", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
 
 	// Tier 5
 	// public static final DeferredItem<ArmorPlate> LUSHIO = item("lushio", () -> new ArmorPlate(Modifier.FORTUNE), ApeironCreativeTab.MAGIC);
-	public static final DeferredItem<TieredItem> TUGTUPITE_INGOT = item("tugtupite_ingot", () -> new TieredItem(5), ApeironCreativeTab.MINING);
+	public static final DeferredItem<TieredItemOld> TUGTUPITE_INGOT = item("tugtupite_ingot", () -> new TieredItemOld(5), ApeironCreativeTab.MINING);
 	public static final DeferredItem<UnicornHorn> UNICORN_HORN = item("unicorn_horn", () -> new UnicornHorn(), ApeironCreativeTab.BOSS);
-	public static final DeferredItem<TieredItem> GERMANIUM_PLATE = item("germanium_plate", () -> new TieredItem(5), ApeironCreativeTab.TECH);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_5 = item("armor_plate_tier_5", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> GERMANIUM_PLATE = item("germanium_plate", () -> new TieredItemOld(5), ApeironCreativeTab.TECH);
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_5 = item("armor_plate_tier_5", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
 
 	// Tier 6
 	// public static final DeferredItem<ArmorPlate> AQUIO = item("aquio", () -> new ArmorPlate(Modifier.WATER_BREATHING), ApeironCreativeTab.MAGIC);
-	public static final DeferredItem<TieredItem> KYANITE_INGOT = item("kyanite_ingot", () -> new TieredItem(6), ApeironCreativeTab.MINING);
-	public static final DeferredItem<ArmorPlate> KRAKEN_TENTACLE = item("kraken_tentacle", () -> new ArmorPlate(Modifier.SPEED_SWIM), ApeironCreativeTab.BOSS);
-	public static final DeferredItem<TieredItem> LUTETIUM_PLATE = item("lutetium_plate", () -> new TieredItem(6), ApeironCreativeTab.TECH);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_6 = item("armor_plate_tier_6", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> KYANITE_INGOT = item("kyanite_ingot", () -> new TieredItemOld(6), ApeironCreativeTab.MINING);
+	public static final DeferredItem<ModifierItem> KRAKEN_TENTACLE = item("kraken_tentacle", () -> new ModifierItem(Modifier.SPEED_SWIM), ApeironCreativeTab.BOSS);
+	public static final DeferredItem<TieredItemOld> LUTETIUM_PLATE = item("lutetium_plate", () -> new TieredItemOld(6), ApeironCreativeTab.TECH);
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_6 = item("armor_plate_tier_6", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
 
 	// Tier 7
-	public static final DeferredItem<TieredItem> TENEBRIO = item("tenebrio", () -> new TieredItem(7), ApeironCreativeTab.MAGIC);
-	public static final DeferredItem<TieredItem> KUNZITE_INGOT = item("kunzite_ingot", () -> new TieredItem(7), ApeironCreativeTab.MINING);
-	public static final DeferredItem<ArmorPlate> GRIFFIN_TALON = item("griffin_talon", () -> new ArmorPlate(Modifier.THORNS), ApeironCreativeTab.BOSS);
-	public static final DeferredItem<TieredItem> TITANIUM_PLATE = item("titanium_plate", () -> new TieredItem(7), ApeironCreativeTab.TECH);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_7 = item("armor_plate_tier_7", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> TENEBRIO = item("tenebrio", () -> new TieredItemOld(7), ApeironCreativeTab.MAGIC);
+	public static final DeferredItem<TieredItemOld> KUNZITE_INGOT = item("kunzite_ingot", () -> new TieredItemOld(7), ApeironCreativeTab.MINING);
+	public static final DeferredItem<ModifierItem> GRIFFIN_TALON = item("griffin_talon", () -> new ModifierItem(Modifier.THORNS), ApeironCreativeTab.BOSS);
+	public static final DeferredItem<TieredItemOld> TITANIUM_PLATE = item("titanium_plate", () -> new TieredItemOld(7), ApeironCreativeTab.TECH);
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_7 = item("armor_plate_tier_7", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
 
 	// Tier 8
-	public static final DeferredItem<ArmorPlate> FLARIO = item("flario", () -> new ArmorPlate(Modifier.FIRE_RESISTANCE), ApeironCreativeTab.MAGIC);
-	public static final DeferredItem<TieredItem> SPHALERITE_INGOT = item("sphalerite_ingot", () -> new TieredItem(8), ApeironCreativeTab.MINING);
-	public static final DeferredItem<ArmorPlate> PHOENIX_FEATHER = item("phoenix_feather", () -> new ArmorPlate(Modifier.RESURRECTION), ApeironCreativeTab.BOSS);
-	public static final DeferredItem<ArmorPlate> NIOBIUM_PLATE = item("niobium_plate", () -> new ArmorPlate(Modifier.AUTO_SMELT), ApeironCreativeTab.TECH);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_8 = item("armor_plate_tier_8", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<ModifierItem> FLARIO = item("flario", () -> new ModifierItem(Modifier.FIRE_RESISTANCE), ApeironCreativeTab.MAGIC);
+	public static final DeferredItem<TieredItemOld> SPHALERITE_INGOT = item("sphalerite_ingot", () -> new TieredItemOld(8), ApeironCreativeTab.MINING);
+	public static final DeferredItem<ModifierItem> PHOENIX_FEATHER = item("phoenix_feather", () -> new ModifierItem(Modifier.RESURRECTION), ApeironCreativeTab.BOSS);
+	public static final DeferredItem<ModifierItem> NIOBIUM_PLATE = item("niobium_plate", () -> new ModifierItem(Modifier.AUTO_SMELT), ApeironCreativeTab.TECH);
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_8 = item("armor_plate_tier_8", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
 
 	// Tier 9
-	public static final DeferredItem<TieredItem> TRANQUIO = item("tranquio", () -> new TieredItem(9), ApeironCreativeTab.MAGIC);
-	public static final DeferredItem<TieredItem> ADAMITE_INGOT = item("adamite_ingot", () -> new TieredItem(9), ApeironCreativeTab.MINING);
+	public static final DeferredItem<TieredItemOld> TRANQUIO = item("tranquio", () -> new TieredItemOld(9), ApeironCreativeTab.MAGIC);
+	public static final DeferredItem<TieredItemOld> ADAMITE_INGOT = item("adamite_ingot", () -> new TieredItemOld(9), ApeironCreativeTab.MINING);
 	public static final DeferredItem<TieredArmorItem> CYCLOPS_EYE = item("cyclops_eye", () -> new TieredArmorItem(ArmorMaterials.NETHERITE, ArmorItem.Type.HELMET, Modifier.NIGHT_VISION), ApeironCreativeTab.BOSS);
-	public static final DeferredItem<TieredItem> CHROMIUM_PLATE = item("chromium_plate", () -> new TieredItem(9), ApeironCreativeTab.TECH);
-	public static final DeferredItem<ArmorPlate> ARMOR_PLATE_TIER_9 = item("armor_plate_tier_9", () -> new ArmorPlate(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<TieredItemOld> CHROMIUM_PLATE = item("chromium_plate", () -> new TieredItemOld(9), ApeironCreativeTab.TECH);
+	public static final DeferredItem<ModifierItem> ARMOR_PLATE_TIER_9 = item("armor_plate_tier_9", () -> new ModifierItem(Modifier.PROTECTION), ApeironCreativeTab.GEAR);
 
 	// Tier 10
 
@@ -199,20 +206,22 @@ public class ApeironItems {
 	// public static final DeferredItem<ArmorPlate> IRIDIUM_PLATE = item("iridium_plate", () -> new ArmorPlate(Modifier.RETRIEVING, "Iridium Plate"), ApeironCreativeTab.TECH);
 	public static final DeferredItem<OpalDust> OPAL_DUST = item("opal_dust", OpalDust::new, ApeironCreativeTab.MINING);
 	public static final DeferredItem<OpalDustClump> OPAL_DUST_CLUMP = item("opal_dust_clump", OpalDustClump::new, ApeironCreativeTab.MINING);
-	public static final DeferredItem<ArmorPlate> OPAL_INGOT = item("opal_ingot", () -> new ArmorPlate(Modifier.FLIGHT, "Opal Ingot"), ApeironCreativeTab.MINING);
+	public static final DeferredItem<ModifierItem> OPAL_INGOT = item("opal_ingot", () -> new ModifierItem(Modifier.FLIGHT, "Opal Ingot"), ApeironCreativeTab.MINING);
 	public static final DeferredItem<OpalHelmet> OPAL_HELMET = item("opal_helmet", OpalHelmet::new, ApeironCreativeTab.GEAR);
 	public static final DeferredItem<OpalChestplate> OPAL_CHESTPLATE = item("opal_chestplate", OpalChestplate::new, ApeironCreativeTab.GEAR);
 	public static final DeferredItem<OpalLeggings> OPAL_LEGGINGS = item("opal_leggings", OpalLeggings::new, ApeironCreativeTab.GEAR);
 	public static final DeferredItem<OpalBoots> OPAL_BOOTS = item("opal_boots", OpalBoots::new, ApeironCreativeTab.GEAR);
-	public static final DeferredItem<ArmorPlate> DRAGON_SCALE = item("dragon_scale", () -> new ArmorPlate(Modifier.FLIGHT, "Dragon Scale"), ApeironCreativeTab.BOSS);
-	public static final DeferredItem<TieredItem> ARMOR_PLATE_TIER_10 = item("armor_plate_tier_10", () -> new TieredItem(10, "Armor Plate"), ApeironCreativeTab.GEAR);
+	public static final DeferredItem<ModifierItem> DRAGON_SCALE = item("dragon_scale", () -> new ModifierItem(Modifier.FLIGHT, "Dragon Scale"), ApeironCreativeTab.BOSS);
+	public static final DeferredItem<TieredItemOld> ARMOR_PLATE_TIER_10 = item("armor_plate_tier_10", () -> new TieredItemOld(10, "Armor Plate"), ApeironCreativeTab.GEAR);
 
 	/** The registry of all creative tabs in the "Example" mod. */
-	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Apeiron.MODID);
+	private static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Apeiron.MODID);
 
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXPLORATION_TAB = CREATIVE_MODE_TABS.register("exploration", () -> CreativeModeTab
+	private static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXPLORATION_TAB = CREATIVE_MODE_TABS.register("exploration", () -> CreativeModeTab
 		.builder()
-		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".exploration")).icon(EMERALD_AWARD.get()::getDefaultInstance).displayItems((parameters, output) -> {
+		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".exploration"))
+		.icon(EMERALD_AWARD.get()::getDefaultInstance)
+		.displayItems((parameters, output) -> {
 			for (var item : CREATIVE_TAB_ITEMS.get(ApeironCreativeTab.EXPLORATION)) {
 				output.accept(item.get().getDefaultInstance());
 			}
@@ -220,9 +229,11 @@ public class ApeironItems {
 		.build()
 	);
 
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAGIC_TAB = CREATIVE_MODE_TABS.register("magic", () -> CreativeModeTab
+	private static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAGIC_TAB = CREATIVE_MODE_TABS.register("magic", () -> CreativeModeTab
 		.builder()
-		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".magic")).icon(TRANQUIO.get()::getDefaultInstance).displayItems((parameters, output) -> {
+		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".magic"))
+		.icon(TRANQUIO.get()::getDefaultInstance)
+		.displayItems((parameters, output) -> {
 			for (var item : CREATIVE_TAB_ITEMS.get(ApeironCreativeTab.MAGIC)) {
 				output.accept(item.get().getDefaultInstance());
 			}
@@ -230,9 +241,11 @@ public class ApeironItems {
 		.build()
 	);
 
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MINING_TAB = CREATIVE_MODE_TABS.register("mining", () -> CreativeModeTab
+	private static final DeferredHolder<CreativeModeTab, CreativeModeTab> MINING_TAB = CREATIVE_MODE_TABS.register("mining", () -> CreativeModeTab
 		.builder()
-		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".mining")).icon(OPAL_DUST.get()::getDefaultInstance).displayItems((parameters, output) -> {
+		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".mining"))
+		.icon(OPAL_DUST.get()::getDefaultInstance)
+		.displayItems((parameters, output) -> {
 			for (var item : CREATIVE_TAB_ITEMS.get(ApeironCreativeTab.MINING)) {
 				output.accept(item.get().getDefaultInstance());
 			}
@@ -240,9 +253,11 @@ public class ApeironItems {
 		.build()
 	);
 
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TECH_TAB = CREATIVE_MODE_TABS.register("tech", () -> CreativeModeTab
+	private static final DeferredHolder<CreativeModeTab, CreativeModeTab> TECH_TAB = CREATIVE_MODE_TABS.register("tech", () -> CreativeModeTab
 		.builder()
-		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".tech")).icon(NIOBIUM_PLATE.get()::getDefaultInstance).displayItems((parameters, output) -> {
+		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".tech"))
+		.icon(NIOBIUM_PLATE.get()::getDefaultInstance)
+		.displayItems((parameters, output) -> {
 			for (var item : CREATIVE_TAB_ITEMS.get(ApeironCreativeTab.TECH)) {
 				output.accept(item.get().getDefaultInstance());
 			}
@@ -250,9 +265,11 @@ public class ApeironItems {
 		.build()
 	);
 
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> BOSS_TAB = CREATIVE_MODE_TABS.register("boss", () -> CreativeModeTab
+	private static final DeferredHolder<CreativeModeTab, CreativeModeTab> BOSS_TAB = CREATIVE_MODE_TABS.register("boss", () -> CreativeModeTab
 		.builder()
-		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".boss")).icon(KRAKEN_TENTACLE.get()::getDefaultInstance).displayItems((parameters, output) -> {
+		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".boss"))
+		.icon(KRAKEN_TENTACLE.get()::getDefaultInstance)
+		.displayItems((parameters, output) -> {
 			for (var item : CREATIVE_TAB_ITEMS.get(ApeironCreativeTab.BOSS)) {
 				output.accept(item.get().getDefaultInstance());
 			}
@@ -260,9 +277,11 @@ public class ApeironItems {
 		.build()
 	);
 
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GEAR = CREATIVE_MODE_TABS.register("gear", () -> CreativeModeTab
+	private static final DeferredHolder<CreativeModeTab, CreativeModeTab> GEAR_TAB = CREATIVE_MODE_TABS.register("gear", () -> CreativeModeTab
 		.builder()
-		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".gear")).icon(ARMOR_PLATE_TIER_7.get()::getDefaultInstance).displayItems((parameters, output) -> {
+		.title(Component.translatable("itemGroup." + Apeiron.MODID + ".gear"))
+		.icon(ARMOR_PLATE_TIER_7.get()::getDefaultInstance)
+		.displayItems((parameters, output) -> {
 			for (var item : CREATIVE_TAB_ITEMS.get(ApeironCreativeTab.GEAR)) {
 				output.accept(item.get().getDefaultInstance());
 			}
